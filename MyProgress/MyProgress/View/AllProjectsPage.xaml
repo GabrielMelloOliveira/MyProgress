@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyProgress.View.AllProjectsPage">
+    <ContentPage Title="Fazer">
+        <StackLayout>
+            <ListView x:Name="lvDoProjects" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" TextColor="{Binding PriorityColor}" Detail="{Binding CountTasks}" DetailColor="LightGray" >
+                            <TextCell.ContextActions>
+                                <MenuItem Clicked="MenuItem_Clicked_Edit_Do" Text="Editar"/>
+                                <MenuItem Clicked="MenuItem_Clicked_Change_Do" Text="Mudar para Fazendo"/>
+                            </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>    
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Fazendo">
+        <StackLayout>
+            <ListView x:Name="lvDoingProjects" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" TextColor="{Binding PriorityColor}" Detail="{Binding CountTasks}" DetailColor="LightGray" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Feito">
+        <StackLayout>
+            <ListView x:Name="lvDoneProjects" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" TextColor="{Binding PriorityColor}" Detail="{Binding CountTasks}" DetailColor="LightGray" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyProgress.View.AddProjectPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10, 20">
+            <Label Text="Nome do Projeto:" FontSize="Medium" HorizontalOptions="FillAndExpand" />
+            <Entry x:Name="entryName" Placeholder="Digite o nome do Projeto" PlaceholderColor="LightGray" HorizontalOptions="FillAndExpand" />
+            <Label Text="Prioridade:" FontSize="Medium" HorizontalOptions="FillAndExpand" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Button x:Name="btnLow" BorderRadius="40" BackgroundColor="Transparent" Text="Baixa" HorizontalOptions="StartAndExpand" />
+                <Button x:Name="btnModerate" BorderRadius="40" BackgroundColor="Transparent" Text="Moderada" HorizontalOptions="CenterAndExpand" />
+                <Button x:Name="btnHigh" BorderRadius="40" BackgroundColor="Transparent" Text="Alta" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            <Button x:Name="btnSave" BorderRadius="40" TextColor="White" BackgroundColor="Blue" Text="Salvar Projeto" HorizontalOptions="FillAndExpand" VerticalOptions="End" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
